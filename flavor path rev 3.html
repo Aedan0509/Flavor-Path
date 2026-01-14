@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>Flavor Path</title> 
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
+	<style> 
+	:root { 
+		--bg: #fffef9; 
+		--text: #1a1a1a; 
+		--muted: #5a5a5a; 
+		--accent: #2e5d3f; /* deep green */ 
+		--accent-2: #c9a227; /* gold */ 
+		--surface: #ffffff; 
+		--border: #e0e0e0; 
+} 
+body { 
+	margin: 0; 
+	background: var(--bg); 
+	color: var(--text); 
+	font-family: "Inter", Century Gothic; 
+	line-height: 1.6; 
+	transition: background 0.3s, color 0.3s; 
+} 
+h1, h2, h3 { font-family: "Playfair Display", serif; margin-bottom: 12px; } 
+.section { padding: 64px 20px; text-align: center; } 
+.container { max-width: 1100px; margin: 0 auto; } 
+
+/* Header */ 
+header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; } 
+.banner { 
+	width: 100%; 
+	height: 200px; 
+	background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") center/cover no-repeat; } 
+nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; } 
+nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; } 
+nav a { text-decoration: none; color: var(--text); font-weight: 500; } 
+nav a:hover { color: var(--accent); } 
+#themeToggle { border: none; background: var(--accent); color: #fff; padding: 8px 14px; border-radius: 6px; cursor: pointer; } 
+
+/* Hero */ 
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; } 
+.hero img { width: 100%; border-radius: 14px; } 
+
+/* Menu */ 
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; } 
+.menu-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); } 
+.menu-card img { width: 100%; display: block; } 
+.menu-body { padding: 14px; } 
+
+/* Services */ 
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; } 
+.service-card { border: 1px solid var(--border); border-radius: 14px; padding: 18px; background: var(--surface); } 
+
+/* Testimonials */ 
+.testimonial { margin: 20px auto; max-width: 600px; font-style: italic; } 
+
+/* Contact */ 
+form { max-width: 400px; margin: 0 auto; text-align: left; } 
+label { font-weight: 600; } 
+input, textarea { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid var(--border); border-radius: 8px; } 
+button { background: var(--accent); color: #fff; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; } 
+button:hover { background: var(--accent-2); } 
+.error { color: red; font-size: 0.9em; } 
+
+/* Footer */ 
+footer { background: var(--surface); border-top: 1px solid var(--border); padding: 20px; text-align: center; } 
+
+/* Dark mode */ 
+:root.dark-mode { 
+	--bg: #121212; 
+	--text: #f5f5f5; 
+	--muted: #bbbbbb; 
+	--accent: #c9a227; 
+	--accent-2: #e6c767; 
+	--surface: #1e1e1e; 
+	--border: #333333; 
+} 
+  </style> 
+</head> 
+<body> 
+<header> 
+	<div class="banner"></div> <!-- Banner image --> 
+	<nav> 
+	<h1>Flavor Path-Your Shortcut to Everyday Flavor</h1> 
+	<ul> 
+	<li><a href="#home">Home</a></li> 
+	<li><a href="#about">About</a></li> 
+	<li><a href="#menu">Menu</a></li> 
+	<li><a href="#services">Services</a></li> 
+	<li><a href="#testimonials">Testimonials</a></li> 
+	<li><a href="#contact">Contact</a></li> 
+	</ul> 
+	<button id="themeToggle">🌙 Dark Mode</button> 
+	</nav> 
+</header>
+
+  <section id="home" class="hero section">
+    <div>
+      <h2>Crafted flavors, Heartfelt Hospitality</h2>
+      <p>At Flavor Path, we believe cooking is more than just preparing meals-it's an art, a science, 
+and a way to bring people together. Whenever you're a sesoned chef or just starting your culinary journey, 
+our goal is to inspire you with delicious recipes, helpful tips, and creative ideas that make every dish 
+unforgettable. Explore a world of flavors, learn new techniques, and discover the joy of creating meals that 
+nourish both body and soul. From quick weekday dinners to indulgent weekend feasts, we've got something for every taste 
+and occasion.
+
+Let's cook, create, and celebrate the magic of food-together!</p>
+    </div>
+    <img src="https://img.taste.com.au/qaX_yQCx/w643-h428-cfill-q90/taste/2016/11/grilled-salmon-with-apple-slaw-89964-1.jpeg" alt="Signature dish-Pan-Seared Salmon with Kale and Apple Salad" />
+  </section>
+
+  <section id="about" class="section">
+    <h2>Meet Chef Aedan 👨‍🍳</h2>
+    <img src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-1/615220699_122099900445210916_1166235707960314081_n.jpg?stp=c0.256.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFx4qxPdnrIqJPV71b-XHcOEzV9QI8buVYTNX1Ajxu5ViTysRgrS8UbLIgY8tfJvlvF3n5tNG94wH0so-msa4BU&_nc_
+ohc=wEpNh1sGbukQ7kNvwHe1vLY&_nc_oc=Admusn3Svv7AiKWXfLzUahMVQ06AiGqyMMlWsgCGbliU0gZUfxJeLhOdClbW8UPYSpM&_nc_zt=24&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=UvNvn-GUr-Zz1fLZvGqwoQ&oh=00_AfpTWgC8R1eztXUmpCVFHV0GkIz2jJ5cfLf2egJ0Kn62uw&oe=696C3C2B" alt="Chef portrait" style="max-width:300px;border-radius:14px;" />
+    <p> A passionate student chef whose creativity and dedication bring fresh energy to every dish., Aedan is constantly exploring new flavors, techniques, and traditions, blending classic recipes with modern twists.</p>
+  </section>
+
+<a href="https://www.youtube.com/channel/UC4JHoAU1MzAVnUE1h3QVx5g" target="_blank" 
+style="display:inline-block; background:#FF0000; color:#fff; padding:10px 16px; 
+border-radius:6px; text-decoration:none; font-weight:bold;"> 
+▶ Watch on YouTube 
+</a>
+
+  <section id="menu" class="section">
+
+    <h2>Signature Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="https://assets.unileversolutions.com/recipes-v3/214408-default.png?im=AspectCrop=(718,401);Resize=(718,401)
+" alt="Pork Sinigang" />
+        <div class="menu-body"><h3>Pork Sinigang</h3><p>Pork Sinigang is a delicious Filipino sour soup dish.</p></div>
+      </div>
+      <div class="menu-card">
+        <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2024/09/THUMB-VIDEO-2_rev1-56-1200x675.jpeg?im=Resize,width=570;" alt="Tiramisu" />
+        <div class="menu-body"><h3>Tiramisu</h3><p>Espresso-soaked savoiardi with mascarpone cream.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><h3>Personalized Meal Planning</h3><p>Customized weekly meal plans tailored to your dietary needs, preferences, and health goal.</p></div>
+      <div class="service-card"><h3>Healthy Recipe Library</h3><p>Access to hundreds of easy-to-follow, nutrious recipes.
+Step-by-step instructions with nutritional information for every dish</p></div>
+      <div class="service-card"><h3>Cooking Tutorials & Video</h3><p>Learn healthy ciiking techniques forn expert chefs.
+Video guides for quick meals, meal prep, and balanced eating</p></div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <div class="testimonial">“Every bite was a revelation. Aedan made our dinner unforgettable.” — Mara & Luis</div>
+    <div class="testimonial">“The class was fun and delicious. I finally mastered sinigang!” — Danica</div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input id="name" type="text" required />
+      <small class="error"></small>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+      <small class="error"></small>
+
+      <label for="message">Message</label>
+      <textarea id="message" required></textarea>
+      <small class="error"></small>
+
+      <button type="submit">Send</button>
+      <p id="formResponse"></p>
+    </form>
+  </section>
+
+  <!-- other sections unchanged -->
+
+  <footer>
+    <p>© 2026 Flavor Path. All rights reserved.</p>
+    <p>Follow me: Instagram | Facebook | Tiktok | Youtube</p>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("themeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark-mode"); // apply to :root
+      toggleBtn.textContent = document.documentElement.classList.contains("dark-mode")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+    });
+
+    // Simple contact form validation
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("formResponse").textContent = "Message sent!";
+    });
+  </script>
+</body>
+</html>
